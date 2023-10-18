@@ -1,6 +1,10 @@
 # Lessons Learned with Rock Paper Scissors
 
-## Custom HTML Attributes
+## Nomenclature
+### `JS-` HTML tag
+HTML elements that have JS acting on them should be prefixed with `js-`.
+
+### Custom HTML Attributes
 You can prefix any name with `data-` to create a custom attribute which JS can act on.
 
 HTML
@@ -12,7 +16,7 @@ JS
 ```js
 function computerPlay(){
     // .random is [0, 1)
-    // ex: 0.99 * 3 = 3.96, floor is 2.97
+    // ex: 0.99 * 3 = 2.97, floor is 2
     // randomInt will go from 0 to 2
     // choice starts at zeroth index, so 0, 1, 2
     let randomInt = Math.floor(Math.random() * 3);
@@ -20,6 +24,28 @@ function computerPlay(){
     let choice = buttons[randomInt].getAttribute('data-choice'); ⭐
     return choice;
 }
+```
+## Algorithms
+### Assigning value to strings in a quick way
+When given a set of string conditions and a points system that operates with respect to a player, we can organize values quickly by using all truthy and unique values (ie a tie) with respect to one player, and use `else` as a way to account for all inverse conditions that would be falsey values.
+
+This works in a pinch for conditions like these.
+```js
+    // rock beats scissors 
+    // paper beats rock
+    // scissors beat paper
+    
+    if (playerChoice == 'Rock' && computerChoice == 'Scissors') {
+        score.updateScore('wins');
+    } else if (playerChoice == 'Paper' && computerChoice == 'Rock') {
+        score.updateScore('wins');
+    } else if (playerChoice == 'Scissors' && computerChoice == 'Paper') {
+        score.updateScore('wins');
+    } else if (playerChoice == computerChoice) {
+        score.updateScore('ties');
+    } else {
+        score.updateScore('losses');
+    }
 ```
 
 

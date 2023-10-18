@@ -22,11 +22,10 @@ let choiceReport = document.getElementById('js-player-selection');
 
 function computerPlay(){
     // .random is [0, 1)
-    // ex: 0.99 * 3 = 3.96, floor is 2.97
+    // ex: 0.99 * 3 = 2.97, floor is 2
     // randomInt will go from 0 to 2
     // choice starts at zeroth index, so 0, 1, 2
     let randomInt = Math.floor(Math.random() * 3);
-    console.log(randomInt)
     let choice = buttons[randomInt].getAttribute('data-choice');
     return choice;
 }
