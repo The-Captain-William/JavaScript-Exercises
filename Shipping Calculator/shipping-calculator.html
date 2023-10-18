@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Calculator</title>
+</head>
+<body>
+    <main>
+        <h1>Shipping Calculator</h1>
+        <div>
+            <p>Orders under $40 have a shipping cost of $10</p>
+            <p>Orders over $40 have free shipping!</p>
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
+            <!-- In this example <form> will cause a whole-page refresh which is not what we want-->
+                <input id="js-input-value" type="text" placeholder="Cost of Order" onkeydown="if (event.key === 'Enter') {calculateShipping()}">
+                <button class="js-calculate-button" onclick="calculateShipping()">Calculate</button>
+            <p id="js-cost-total"></p>
+        </div>
+    </main>
+</body>
+<script src="shippingCalculator.js"></script>
+</html>
