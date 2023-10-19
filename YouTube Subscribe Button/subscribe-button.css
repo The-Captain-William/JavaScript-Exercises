@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.subscribe-button {
+    /*Button Shape*/
+    border: none;
+    padding: .8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 1.5rem;
+
+    /*Button Colors*/
+    background-color: rgb(10, 10, 10);
+    
+    /* Button Font*/
+    font-weight: bold;
+    color: whitesmoke;
+
+    /*Button Interaction*/
+    cursor: pointer;
+}
+
+.subscribe-button:hover {
+    background-color: rgb(31, 31, 31);
+}
+
+.subscribe-button.is-subscribed{
+    background-color: rgb(58, 57, 57);
+}
