@@ -1,0 +1,67 @@
+body {
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(22, 22, 22);
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.choice {
+    color: whitesmoke;
+    border: solid whitesmoke;
+    font-size: 6rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    background-color: rgb(22, 22, 22);   
+    margin: .8rem;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: rgb(94, 38, 28);
+}
+
+.choice:active{
+    background-color: rgb(161, 64, 47);
+}
+
+#reset-button {
+    border: none;
+    padding: .5rem;
+    background-color: rgb(94, 38, 28);
+    color: whitesmoke;
+    border-radius: .2rem;
+}
+
+#reset-button:hover {
+    background-color: rgb(122, 49, 36);
+    cursor: pointer;
+}
+
+.selection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* All choices inside this selection will have this given margin, note the child selector */
+/* .selection > .choice {
+    margin: .8rem;
+} */
+
+.results {
+    text-align: center;
+}
+
+.results.score-results {
+    display: block;
+    margin-left: 10rem;
+}

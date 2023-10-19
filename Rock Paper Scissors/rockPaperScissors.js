@@ -26,18 +26,23 @@ function computerPlay(){
     // randomInt will go from 0 to 2
     // choice starts at zeroth index, so 0, 1, 2
     let randomInt = Math.floor(Math.random() * 3);
-    let choice = buttons[randomInt].getAttribute('data-choice');
-    return choice;
+    let computerButton = buttons[randomInt];
+    return computerButton;
 }
 
 function playGame(button){
     // grab the choice using .getAttribute
     // could also use .innerHTML or .textContent, although .innerHTML may have whitespace
-    let playerChoice = button.getAttribute('data-choice');
     
-    let computerChoice = computerPlay();
-        
-    choiceReport.innerText = `You selected ${playerChoice}, I selected ${computerChoice}`;
+    let playerChoice = button.getAttribute('data-choice');
+    let playerEmoji = button.innerHTML;
+
+    let computerButton = computerPlay();
+    
+    let computerChoice = computerButton.getAttribute('data-choice');
+    let computerEmoji = computerButton.innerHTML;
+
+    choiceReport.innerText = `You selected ${playerChoice} ${playerEmoji}, I selected ${computerChoice} ${computerEmoji}`;
 
     // rock beats scissors 
     // paper beats rock

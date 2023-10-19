@@ -7,20 +7,22 @@
 </head>
 <body>
     <main>
-    <div class="selection">
-    <h1>Rock, Paper, Scissors</h1>
+        <h1>Rock, Paper, Scissors</h1>
+        <div class="selection">
     <!-- "data-" is a way to create custom HTML attributes -->
-        <button class="choice" data-choice="Rock">Rock</button>
-        <button class="choice" data-choice="Paper">Paper</button>
-        <button class="choice" data-choice="Scissors">Scissors</button>
+        <button class="choice" data-choice="Rock">🗿</button>
+        <button class="choice" data-choice="Paper">🧻</button>
+        <button class="choice" data-choice="Scissors">✂</button>
     </div>
 
     <div class="results">
     <p id="js-player-selection"></p>
-    <p class="js-score-results"></p>
-    <button onclick="resetScore()">Reset Score</button>
+    <p class="js-score-results score-results"></p>
+    <button id="reset-button" onclick="resetScore()">Reset Score</button>
+
     </div>
 </main>
 </body>
 <script src="rockPaperScissors.js"></script>
+<link rel="stylesheet" href="rock-paper-scissors.css">
 </html>
